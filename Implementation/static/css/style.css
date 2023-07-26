@@ -1,0 +1,34 @@
+body{
+    background-color: rgb(211, 194, 194);
+}
+
+.heading{
+    border: 2px black solid;
+    padding-left:45%;
+    margin: 10px;
+    background-color: rgb(252, 212, 171);
+}
+.buttons{
+    margin-left: 37%;
+    margin-top: 20%;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+.btn{
+    /* display: block; */
+    /* border: 2px yellow solid; */
+    padding:20px 50px 20px 50px;
+    margin: auto;
+    cursor: pointer;
+    background-color: rgb(230, 137, 137);
+    border-radius: 20px;
+    font-size: 20px;
+    border: 2px solid black;
+}
+.btn1{
+    margin-bottom: 5px;
+    margin-right: 6%;
+}
+

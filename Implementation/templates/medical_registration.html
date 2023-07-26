@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medical information</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/regis_style.css') }}">
+</head>
+<body>
+    <h1>Enter Medical Information below</h1>
+    <form action="/medical_registration" method="post">
+        <div class="container">
+            <div class="form">
+                <label for="Weight">Weight : </label> 
+                <input type="number" name="Weight" required>
+            </div>
+            <div class="form">
+                <label for="Pulse">Pusle Rate : </label>
+                <input type="number" name="pulse" required>
+            </div>
+            <div class="form">
+                <label for="BP">BP : </label>
+                <input type="number" name="BP" placeholder="in [mm Hg]" required>
+            </div>
+            <div class="form">
+                <label for="oxygen level">Oxygen Level : </label>
+                <input type="number" name="oxygen level" placeholder="Percentage" required>
+            </div>
+            <div class="form">
+                <label for="haemoglobin">Haemoglobin : </label> 
+                <input type="number" name="haemoglobin" placeholder="gm/dl" required>
+            </div>
+            <div class="form">
+                <label for="PLT">Platelets : </label> 
+                <input type="number" name="PLT" placeholder="/Lacs" required>
+            </div>
+            <div class="form">
+                <label for="WBC">WBC Count : </label> 
+                <input type="number" name="WBC" placeholder="cells/mcl" required>
+            </div>
+        </div>
+        <div class="container">
+            <div class="form">
+                <label for="HBSAG">HBSAG Rapid Card : </label>
+                <input list="HBSAB" name="HBSAB" placeholder="Select" required>
+                <datalist id="HBSAB">
+                    <option value="Reactive"></option>
+                    <option value="Non Reactive"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="HCV">HCV Rapid Card : </label>
+                <input list="HCV" name="HCV" placeholder="Select" required>
+                <datalist id="HCV">
+                    <option value="Reactive"></option>
+                    <option value="Non Reactive"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="HIV">HIV Rapid Card : </label>
+                <input list="HIV" name="HIV" placeholder="Select" required>
+                <datalist id="HIV">
+                    <option value="Reactive"></option>
+                    <option value="Non Reactive"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="ECG">ECG: </label>
+                <input list="ECG" name="ECG" placeholder="Select" required>
+                <datalist id="ECG">
+                    <option value="Normal"></option>
+                    <option value="Abnormal"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Blood Sugar">Blood Sugar : </label>
+                <input type="number" name="blood sugar" placeholder="Mg/DL" required>
+            </div>
+            <div class="form">
+                <label for="Blood urea">Blood Urea : </label>
+                <input type="number" name="blood urea" placeholder="Mg/DL" required>
+            </div>
+            <div class="form">
+                <label for="Serum creatinne">Serum Creatinne : </label>
+                <input type="number" name="serum creatinne" placeholder="Mg/DL" required>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Chemical Examination</h2>
+            <div class="form">
+                <label for="Albumin">Albumin : </label>
+                <input list="Albumin" name="albumin" placeholder="Select" required>
+                <datalist id="Albumin">
+                    <option value="Present"></option>
+                    <option value="Absent"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Sugar">Sugar : </label>
+                <input list="Sugar" name="sugar" placeholder="Select" required>
+                <datalist id="Sugar">
+                    <option value="Present"></option>
+                    <option value="Absent"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Ketone">Ketone : </label>
+                <input list="Ketone" name="ketone" placeholder="Select" required>
+                <datalist id="ketone">
+                    <option value="Present"></option>
+                    <option value="Absent"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Liver">Liver : </label>
+                <input list="Liver" name="liver" placeholder="Select" required>
+                <datalist id="Liver">
+                    <option value="Normal"></option>
+                    <option value="Abnormal"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Spleen">Spleen  : </label>
+                <input list="Splenn" name="spleen" placeholder="Select" required>
+                <datalist id="Splenn">
+                    <option value="Normal"></option>
+                    <option value="Abnormal"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Pancreas">Pancreas : </label>
+                <input list="Pancreas" name="pancreas" placeholder="Select" required>
+                <datalist id="Pancreas">
+                    <option value="Normal"></option>
+                    <option value="Abnormal"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Kidney">Kidneys : </label>
+                <input list="Kidney" name="kidney" placeholder="Select" required>
+                <datalist id="Kidney">
+                    <option value="Normal"></option>
+                    <option value="Abnormal"></option>
+                </datalist>
+            </div>
+        </div>
+        <div class="container">
+            <h2>Microscopic Examination</h2>
+            <div class="form">
+                <label for="Bacteria">Bacteria : </label>
+                <input list="Bacteria" name="bacteria" placeholder="Select" required>
+                <datalist id="Bacteria">
+                    <option value="Present"></option>
+                    <option value="Absent"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Cast">Cast : </label>
+                <input list="Cast" name="cast" placeholder="Select" required>
+                <datalist id="Cast">
+                    <option value="Present"></option>
+                    <option value="Absent"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Crystal">Crystal : </label>
+                <input list="Crystal" name="crystal" placeholder="Select" required>
+                <datalist id="Crystal">
+                    <option value="Present"></option>
+                    <option value="Absent"></option>
+                </datalist>
+            </div>
+            <div class="form">
+                <label for="Pus cells">Pus cells : </label>
+                <input type="number" name="pus cells" placeholder="/hpf" required>
+            </div>
+            <div class="form">
+                <label for="Epithelial cells">Epithelial cells : </label>
+                <input type="number" name="epithelial cells" placeholder="/hpf" required>
+            </div>
+            <div class="form">
+                <label for="RBCs">RBC count : </label>
+                <input type="number" name="RBCs" placeholder="/hpf" required>
+            </div>
+            <div class="form">
+                <label for="Blood group">Blood Group : </label>
+                <input type="text" name="blood group" placeholder="" required>
+            </div>
+        </div>
+        <div class="btn">
+            <!-- <a type="button" href="/success"  class="btn btn1"><b>Submit</b></a> -->
+            <button type="submit">Submit</button>
+        </div>
+    </form>
+</body>
+</html>

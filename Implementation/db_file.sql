@@ -1,0 +1,54 @@
+create database Med_hist;
+use Med_hist;
+
+create table med_info(
+	P_id int not null auto_increment primary key, name varchar(30), F_name varchar(30), Address varchar(80), Adhaar long, mob long, alt_mob long, email varchar(50), DOB date, Gender varchar(20)
+		);
+        
+insert into med_info (name, F_name, Address, Adhaar, mob, alt_mob, email, DOB, Gender ) values ("Abhishek Kumar Singh", "Kartik Kumar Singh", "Patna Bihar", 954178863049, 7352283805, 8935905626, "abhi24680@outlook.com", '2001-09-12', "Male"); 
+insert into med_info (name, F_name, Address, Adhaar, mob, alt_mob, email, DOB, Gender ) values ("Yatindra Deo", "Anil Kumar", "Bhagalpur Bihar", 474656631187, 8877545918, 9102705657, "yatindradeo12@gmail.com", '2000-08-05', "Male");
+insert into med_info (name, F_name, Address, Adhaar, mob, alt_mob, email, DOB, Gender ) values ("Dhanush sai Reddy", "Shankar Reddy", "Ananthpur AP", 452352942321, 7386802745, 998966485, "dhanushsaireddy8@gmail.com", '2002-08-26', "Male"); 
+select * from med_info;
+alter table med_info modify column Gender varchar(20);
+drop table med_info;
+delete from med_info where P_id = 6;
+create user 'Abhi'@'localhost' identified by 'abc123';
+grant all privileges on med_hist.* to 'Abhi'@'localhost';
+alter table med_info add column ECG varchar(20);
+alter table med_info add column Blood_Pressure varchar(20);
+alter table med_info add column weight varchar(20);
+alter table med_info add column pulse_rate varchar(20);
+alter table med_info add column Oxygen_Level varchar(20);
+alter table med_info add column Haemoglobin varchar(20);
+alter table med_info add column Platelets int;
+alter table med_info add column Total_WBC_count varchar(20);
+-- alter table med_info add column ESR varchar(20);
+-- alter table med_info add column Neutrophils varchar(20);
+-- alter table med_info add column Lymphocyte varchar(20);
+-- alter table med_info add column Eosinophile varchar(20);
+-- alter table med_info add column Monocyte varchar(20);
+-- alter table med_info add column PLT varchar(20);
+alter table med_info add column RBC_Count varchar(20);
+alter table med_info add column HBSAG_Rapid_Card varchar(20);
+alter table med_info add column HCV_Rapid_Card varchar(20);
+alter table med_info add column HIV_I_and_HIV_II_Rapid_Card varchar(20);
+alter table med_info add column Random_Blood_Sugar varchar(20);
+alter table med_info add column Blood_Urea varchar(20);
+alter table med_info add column Serum_Creatinne varchar(20);
+alter table med_info add column Albumin varchar(20);
+alter table med_info add column Sugar varchar(20);
+alter table med_info add column Ketone varchar(20);
+alter table med_info add column Liver varchar(20);
+alter table med_info add column Spleen varchar(20);
+alter table med_info add column Pancreas varchar(20);
+alter table med_info add column Kidneys varchar(20);
+alter table med_info add column Bacteria varchar(20);
+alter table med_info add column Cast varchar(20);
+alter table med_info add column Crystal varchar(20);
+alter table med_info add column Puscells varchar(20);
+alter table med_info add column Epithelialcells varchar(20);
+-- alter table med_info add column Prostate varchar(20);
+-- alter table med_info add column Urinary_Bladder varchar(20);
+alter table med_info add column Blood_Group varchar(20);
+-- alter table med_info add column ABO_Group varchar(20);
+-- alter table med_info add column RH_Type varchar(20); 

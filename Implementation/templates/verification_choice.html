@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static',filename='css/style.css') }}"
+    />
+    <script src="app.js"></script>
+  </head>
+  <body>
+    <form action="/verification_choice" method="post">
+      <div class="heading verify">
+        <h1>Verification choice</h1>
+      </div>
+      <div class="buttons">
+        <!-- <a type="button" href="/medical_registration" name="submit" value="iris" class="btn btn1"><b>Iris</b></a>
+      <a type="button" href="/medical_registration" name="submit" value="fingerprint" class="btn btn2"><b>Fingerprint</b></a> -->
+        <b
+          ><input type="submit" class="btn btn1" name="submit" value="iris"
+        /></b>
+        <b
+          ><input
+            type="submit"
+            class="btn btn2"
+            name="submit"
+            value="fingerprint"
+        /></b>
+      </div>
+    </form>
+  </body>
+</html>
